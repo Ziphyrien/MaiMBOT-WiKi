@@ -1,0 +1,175 @@
+# MaiMBot搭建指南
+
+## 📋 前置准备清单
+
+1. 安装Windows 10及以上系统的电脑
+2. 稳定可访问互联网的网络环境
+3. 一颗愿意折腾的心❤️
+
+---
+
+## 一：安装Python环境
+
+### 步骤说明
+
+1. **下载**[安装包](https://www.python.org/downloads/)  
+
+   <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250307230039422.png" alt="image-20250307230039422" style="zoom: 25%;" />
+
+   单机黄色按钮下载安装包
+
+2. **安装过程**  
+   <img src="https://i2.hdslb.com/bfs/new_dyn/fe06ccc38d45f3869b27e9ae0b547255442741548.png@1192w.webp" alt="Python安装界面" style="zoom:67%;" />  
+
+   ✅ 必须勾选 `Add Python.exe to PATH`  
+   🔘 选择 `Install Now` 完成安装
+
+---
+
+## 二：部署MongoDB数据库
+
+### 操作指南
+
+1. **获取安装包**  
+   [MongoDB官方下载](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.5-signed.msi)  
+   *推荐使用IDM等下载工具加速*
+
+   <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250307230425907.png" alt="image-20250307230425907" style="zoom: 50%;" />
+
+2. **安装教程**  
+   参考菜鸟教程完整指南：[MongoDB安装教程](https://www.runoob.com/mongodb/mongodb-window-install.html)
+
+---
+
+## 三：配置NapCatQQ框架
+
+### 关键步骤
+
+1. **下载资源**  
+   [NapCatQQ最新版](https://github.com/NapNeko/NapCatQQ/releases/)  
+   *选择 `Win64有头版本`*
+2. **启动程序**  
+   ![NapCat启动器](https://i2.hdslb.com/bfs/new_dyn/3a9950df5b75386614cdcc0610c7d585442741548.png@412w.webp)  
+   双击运行 `NapCatWinBootMain.exe` 登录机器人账号
+
+---
+
+## 四：获取MaiMBot主体
+
+### 获取方式
+
+1. **直链下载**  
+   [MaiMBot 0.5.8-alpha](https://chouli.lanzout.com/iYZOh2pwjgwh)  
+2. **GitHub获取**  
+   访问项目[仓库](https://github.com/SengokuCola/MaiMBot)下载最新构建版
+
+---
+
+## 五：申请API密钥
+
+### 注册流程
+
+#### SiliconCloud
+
+1. **注册**  
+   [注册入口](https://cloud.siliconflow.cn/i/PIRi9yVx)
+2. **创建密钥**  
+   ![API密钥创建](https://i2.hdslb.com/bfs/new_dyn/0dd8146eb8be4effeaa701c0edd8dd96442741548.png@396w_116h.webp)  
+   点击右上角 `新建API秘钥` 生成密钥
+
+---
+
+## 六：项目环境配置
+
+1. **打开PowerShell**  
+   ![路径操作](https://i2.hdslb.com/bfs/new_dyn/d8507504b5fe19203db9ce54f34fc3f8442741548.png@1192w.webp)  
+   在资源管理器地址栏输入 `powershell`
+
+2. **创建虚拟环境**  (出错可跳过此步骤)
+
+   ```powershell
+   python -m venv bot
+   bot\Scripts\activate 
+   ```
+
+3. **配置清华镜像源**  
+
+   ```powershell
+   pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+   pip install -r requirements.txt
+   ```
+
+4. **初始化项目**  
+
+   在shell/cmd输入以下命令后再关闭
+
+   ```powershell
+   nb run
+   ```
+
+---
+
+## 七：配置文件修改
+
+### 必要工具
+
+注意❗如果你在使用*Notepad++*请马上卸载谢谢❗❗❗切勿使用任何具有[政治因素](https://zhuanlan.zhihu.com/p/609192758)的编辑器❗ 可使用该国内作者制作的开源平替****
+
+[Notepad--](https://gitee.com/cxasm/notepad--/releases/download/v3.2/Notepad--v3.2.0-plugin-Installer.exe)  **鉴于某些Notepad竞品作者的不当言论，Notepad--的意义在于：减少一点*错误言论*，减少一点*自以为是*。**
+
+或巨硬大厂的[VSCode](https://code.visualstudio.com/download) 真的好用
+
+### 配置文件调整
+
+1. **.env.prod文件**  
+
+   ```env
+   SILICONFLOW_KEY=你的API密钥
+   ```
+
+2. **bot_config.toml文件**  
+
+   ```toml
+   QQ = 你的机器人QQ号
+   nickname = "自定义机器人名称"
+   
+   [groups]
+   talk_allowed = [
+     群号1,
+     群号2
+   ]
+   ```
+
+---
+
+## 八：系统联调测试
+
+### 连接配置
+
+1. **启动数据库**  
+   双击运行 `run_db.bat`
+
+2. **NapCat设置**  
+   - 新建Websocket客户端  
+   - 名称: `bot`  
+   - URL: `ws://localhost:8080/onebot/v11/ws`
+
+### 最终启动
+
+```powershell
+运行run_maimai.bat
+```
+
+---
+
+## 📎 资源汇总
+
+| 名称         | 链接                                                         |
+| ------------ | ------------------------------------------------------------ |
+| Python安装包 | [下载地址](https://www.python.org/downloads/)                |
+| MaiMBot程序  | [0.5.8-alpha版](https://chouli.lanzout.com/iYZOh2pwjgwh)     |
+| MongoDB      | [官方下载](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.5-signed.msi) |
+| NapCatQQ     | [GitHub发布页](https://github.com/NapNeko/NapCatQQ/releases/) |
+
+---
+
