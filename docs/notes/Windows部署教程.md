@@ -74,7 +74,7 @@
 1. **注册**  
    [注册入口](https://cloud.siliconflow.cn/i/PIRi9yVx)
 2. **创建密钥**  
-   ![API密钥创建](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMNZ8sdQWDA7RWFUJBT2wUjW4t_cTAAAufGMRuICVlWju20CxOnA7cBAAMCAANtAAM2BA.png)  
+   ![API密钥创建](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMNZ8sdQWDA7RWFUJBT2wUjW4t_cTAAAufGMRuICVlWju20CxOnA7cBAAMCAANtAAM2BA.webp)  
    点击右上角 `新建API秘钥` 生成密钥
 
 ---
@@ -82,7 +82,7 @@
 ## 六：项目环境配置
 
 1. **打开PowerShell**  
-   ![路径操作]([https://i2.hdslb.com/bfs/new_dyn/d8507504b5fe19203db9ce54f34fc3f8442741548.png@1192w.webp](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMQZ8sectU6fOetFSfQs41q3gQRD_MAAujGMRuICVlWb2trfFSzhXQBAAMCAANtAAM2BA.png))  
+   ![路径操作](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMQZ8sectU6fOetFSfQs41q3gQRD_MAAujGMRuICVlWb2trfFSzhXQBAAMCAANtAAM2BA.png)  
    在资源管理器地址栏输入 `powershell`
 
 2. **创建虚拟环境**  (出错可跳过此步骤)
