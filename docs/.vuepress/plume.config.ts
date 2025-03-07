@@ -6,12 +6,13 @@ import { notes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'https://i0.hdslb.com/bfs/new_dyn/d14f344139afb6bb2ef24a905d184a691344099355.png@1052w_!web-dynamic.webp',
+  logo: 'https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMSZ8shj5Csuj7E-bNV8POK_LF6v0gAAurGMRuICVlWac5rIkYU0sYBAAMCAAN3AAM2BA.png',
 
   appearance: true,  // 配置 深色模式
 
   social: [
-    { icon: 'github', link: 'https://github.com/SengokuCola/MaiMBot/' },{ icon: 'qq', link: 'https://qm.qq.com/q/kdJox0XMXK' },
+    { icon: 'github', link: 'https://github.com/SengokuCola/MaiMBot/' },
+    { icon: 'qq', link: 'https://qm.qq.com/q/kdJox0XMXK' },
   ],
   navbarSocialInclude: ['github,qq'], // 允许显示在导航栏的 social 社交链接
   // aside: true, // 页内侧边栏， 默认显示在右侧
