@@ -14,7 +14,7 @@
 
 1. **下载**[安装包](https://www.python.org/downloads/)  
 
-   <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250307230039422.png" alt="image-20250307230039422" style="zoom: 25%;" />
+   <img src="https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMKZ8saxfRoWJCPzj1nmdMVH7vH3eEAAtfGMRuICVlW1Gyk0xzvFHsBAAMCAAN3AAM2BA.png" alt="image-20250307230039422" style="zoom: 25%;" />
 
    单机黄色按钮下载安装包
 
@@ -34,7 +34,7 @@
    [MongoDB官方下载](https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.5-signed.msi)  
    *推荐使用IDM等下载工具加速*
 
-   <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250307230425907.png" alt="image-20250307230425907" style="zoom: 50%;" />
+   <img src="https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMJZ8sauA6a0rNHXOhYZORUnCVMeXgAAtbGMRuICVlWUz_BJiUCVq4BAAMCAAN4AAM2BA.png" alt="image-20250307230425907" style="zoom: 50%;" />
 
 2. **安装教程**  
    参考菜鸟教程完整指南：[MongoDB安装教程](https://www.runoob.com/mongodb/mongodb-window-install.html)
