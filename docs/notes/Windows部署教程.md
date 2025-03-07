@@ -19,7 +19,7 @@
    单机黄色按钮下载安装包
 
 2. **安装过程**  
-   <img src="https://i2.hdslb.com/bfs/new_dyn/fe06ccc38d45f3869b27e9ae0b547255442741548.png@1192w.webp" alt="Python安装界面" style="zoom:67%;" />  
+   <img src="https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMMZ8scf6pzzT58hSC1-SUXYr9uAdsAAubGMRuICVlWxkloUeFlWnEBAAMCAAN4AAM2BA.png" alt="Python安装界面" style="zoom:67%;" />  
 
    ✅ 必须勾选 `Add Python.exe to PATH`  
    🔘 选择 `Install Now` 完成安装
@@ -74,7 +74,7 @@
 1. **注册**  
    [注册入口](https://cloud.siliconflow.cn/i/PIRi9yVx)
 2. **创建密钥**  
-   ![API密钥创建](https://i2.hdslb.com/bfs/new_dyn/0dd8146eb8be4effeaa701c0edd8dd96442741548.png@396w_116h.webp)  
+   ![API密钥创建](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMNZ8sdQWDA7RWFUJBT2wUjW4t_cTAAAufGMRuICVlWju20CxOnA7cBAAMCAANtAAM2BA.png)  
    点击右上角 `新建API秘钥` 生成密钥
 
 ---
@@ -82,7 +82,7 @@
 ## 六：项目环境配置
 
 1. **打开PowerShell**  
-   ![路径操作](https://i2.hdslb.com/bfs/new_dyn/d8507504b5fe19203db9ce54f34fc3f8442741548.png@1192w.webp)  
+   ![路径操作]([https://i2.hdslb.com/bfs/new_dyn/d8507504b5fe19203db9ce54f34fc3f8442741548.png@1192w.webp](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMQZ8sectU6fOetFSfQs41q3gQRD_MAAujGMRuICVlWb2trfFSzhXQBAAMCAANtAAM2BA.png))  
    在资源管理器地址栏输入 `powershell`
 
 2. **创建虚拟环境**  (出错可跳过此步骤)
