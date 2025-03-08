@@ -1,34 +1,33 @@
-/* 雅致动漫风格配置 */
+/* 动漫风格深色主题 */
 :root {
-  /* 标题渐变 - 从右下到左上的自然过渡 */
+  /* 标题渐变 - 提取图片中的炭黑与浅灰 */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
-    to left top,  /* 逆向渐变方向 */
-    #d9cfcb 15%,  /* 起始点米白色 */
-    #ae9990 45%,  /* 过渡到蔷薇粉 */
-    #6c2d26 80%   /* 终点深红色 */
+    135deg, 
+    #4d4d4d 25%, 
+    #696969 50%,
+    #aaaaaa 75%
   );
-
-  /* 文字配色 */
-  --vp-home-hero-tagline: #262625;         /* 深灰-正文字色 */
-  --vp-home-hero-text: #603d34;            /* 茶褐色-强调色 */
-
-  /* 插画背景设置 */
+  
+  /* 文本配色 - 结合图片亮色 */
+  --vp-home-hero-tagline: #c1c1c1; /* 匹配图片0.2%浅灰 */
+  --vp-home-hero-text: #fdfdfd;    /* 取自图片浅色细节 */
+  
+  /* 插图背景 - 使用图片主色过渡 */
   --vp-home-hero-image-background-image: linear-gradient(
-    45deg,
-    #cfcbd9 0%,       /* 淡紫灰 */
-    #cbd5d9 50%,      /* 冰蓝灰 */
-    #ffffff 100%
+    -30deg,
+    #1f1f1f 20%,  /* 最深色调 */
+    #4e4e4e 50%,  /* 次深色块 */
+    #6d6c6a 80%   /* 边缘灰调 */
   );
-  --vp-home-hero-image-filter: blur(32px) saturate(150%);
-
-  /* 品牌色系适配 */
-  --vp-c-brand-1: #6c2d26;                /* 胭脂红-主品牌色 */
-  --vp-c-brand-2: #603d34;                /* 深赤茶-辅助色 */
-  --vp-c-brand-soft: #ae999066;           /* 半透明蔷薇色 */
-
-  /* UI辅助色 */
-  --vp-button-brand-bg: #6c2d26;          /* 按钮主色 */
-  --vp-button-brand-hover-bg: #603d34;    /* 按钮悬停色 */
-  --vp-link-color: #9e9a98;               /* 链接浅灰 */
+  
+  /* 背景模糊与品牌色定义 */
+  --vp-home-hero-image-filter: blur(40px) brightness(0.9);
+  --vp-c-brand: #d1c0b9;          /* 图片中0.93%日系肤色 */
+  --vp-c-brand-light: #a9a9a9;    /* 图片浅灰 */
+  --vp-c-brand-lighter: #4a4a4a;  /* 中层灰色 */
+  
+  /* 修饰元素透明度 */
+  --vp-home-hero-name-opacity: 0.88;
+  --vp-button-brand-bg: rgba(209, 192, 185, 0.12); 
 }
