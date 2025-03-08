@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: Get Start!🥵
-          link: /docs/1.项目介绍
+          link: /docs/1.项目介绍.md
         -
           theme: alt
           text: Bilibili →
