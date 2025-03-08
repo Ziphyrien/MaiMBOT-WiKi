@@ -7,9 +7,9 @@ config:
     full: true
     image: /plume.svg
     hero:
-      name: 麦麦Bot🤖
-      tagline: MaiMBOT!
-      text: 一款专注于 群组聊天 的赛博网友（非常专注）QQ BOT
+      name: 麦麦🤖
+      tagline: Yes MaiMBOT!
+      text: 专注于群组聊天的赛博网友
       actions:
         -
           theme: brand
