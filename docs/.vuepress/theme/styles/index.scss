@@ -1,12 +1,25 @@
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--vp-c-brand-2));
-  --vp-home-hero-tagline: var(--vp-c-text-2);
-  --vp-home-hero-text: var(--vp-c-text-1);
+  --vp-c-white: #fff;
+  --vp-c-black: #000;
+  --vp-c-neutral: var(--vp-c-black);
+  --vp-c-neutral-inverse: var(--vp-c-white);
   
-  /* 背景色修改为根据提供的色调调整 */
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #636362 50%, #b4b4b4 50%);
+  /* Define wheat color theme */
+  --vp-c-wheat: #F5DEB3;
+
+  /* Modify other colors to match the wheat theme */
+  --vp-c-text-1: var(--vp-c-wheat);
+  --vp-c-text-2: var(--vp-c-wheat);
+  --vp-c-background-1: var(--vp-c-wheat);
   
-  /* 适当的模糊效果，保持一致的视觉风格 */
-  --vp-home-hero-image-filter: blur(44px);
+  --vp-c-brand-2: var(--vp-c-wheat);
+  --vp-c-brand-soft: var(--vp-c-wheat);
 }
+
+[data-theme="dark"] {
+  --vp-c-neutral: var(--vp-c-white);
+  --vp-c-neutral-inverse: var(--vp-c-black);
+  --vp-c-text-1: var(--vp-c-wheat);
+  --vp-c-text-2: var(--vp-c-wheat);
+}
+
