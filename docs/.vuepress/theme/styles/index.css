@@ -1,44 +1,42 @@
 :root {
-  /* 基础色调 */
-  --primary-dark: rgb(111,110,110);    /* 主深灰色 */
-  --primary-light: rgb(216,205,201);   /* 浅米色 */
-  --accent-gray: rgb(180,188,188);     /* 强调浅灰色 */
+  /* 标题系统 */
+  --vp-home-hero-name-color: #6c2d26; /*保留品牌深红色*/
+  
+  /* 文字配色体系 */
+  --vp-home-hero-tagline: #636362;  /*保持原中灰色*/
+  --vp-home-hero-text: #403d3d;     /*调整深色增加对比度*/
 
-  /* 渐变效果 */
-  --gradient-soft: linear-gradient(
-    135deg, 
-    var(--primary-light) 0%, 
-    var(--accent-gray) 50%,
-    rgba(216,205,201,0.2) 100%
-  );
+  /* ███ 关键优化点 █████████████████ */
+  /* 视觉分层背景 */
+  --vp-home-hero-image-background-image: 
+    radial-gradient(
+      circle at 70% 30%, 
+      rgba(203,213,217,0.25) 0%,  /*推荐色#cbd5d9带透明度*/
+      rgba(255,255,255,0) 60%
+    ),
+    linear-gradient(
+      30deg,
+      rgba(174,153,144,0.15) 10%,  /*推荐色#ae9990带透明度*/
+      rgba(207,203,217,0.12) 90%   /*推荐色#cfcbd9淡紫色*/
+    );
+  
+  --vp-home-hero-image-filter: blur(36px) 
+                               brightness(102%) 
+                               contrast(110%);
 
-  /* 文字颜色 */
-  --vp-c-text-1: var(--primary-dark);
-  --vp-c-text-2: rgba(111,110,110,0.85);
+  /* ███ 按钮状态系统 █████████████ */
+  --vp-c-brand-1: #9e9a98;    /*初始态-主色调米灰*/
+  --vp-c-brand-2: #6c2d26;    /*悬停态-深红配色*/
+  --vp-c-brand-3: #3d211e;    /*点击态-更深红*/
   
-  /* 主标题特效 */
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(
-    120deg,
-    var(--primary-light) 30%,
-    var(--accent-gray)
-  );
-  
-  /* 副标题和描述文字 */
-  --vp-home-hero-tagline: var(--vp-c-text-2);
-  --vp-home-hero-desc: rgba(111,110,110,0.8);
-  
-  /* 图片区域特效 */
-  --vp-home-hero-image-background-image: var(--gradient-soft);
-  --vp-home-hero-image-filter: blur(40px) saturate(150%);
-  
-  /* 按钮样式 */
-  --vp-button-brand-bg: var(--accent-gray);
-  --vp-button-brand-hover-bg: rgb(160,170,170);
-  
-  /* 边框样式 */
-  --vp-c-divider: var(--primary-light);
-  
-  /* 代码块样式 */
-  --vp-code-block-bg: rgba(216,205,201,0.15);
+  --vp-button-brand-border: #d9cfcb;       /*主色调边界线*/
+  --vp-button-brand-hover-border: #ae9990; /*悬停边界色*/
+}
+
+/* 动态优化 */
+.vp-home-hero-image {
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: var(--vp-home-hero-image-filter) saturate(150%);
+  }
 }
