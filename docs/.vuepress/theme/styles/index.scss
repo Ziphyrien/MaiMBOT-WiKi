@@ -1,12 +1,12 @@
 :root {
---vp-home-hero-name-color: transparent;
---vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--vp-c-brand-2));
---vp-home-hero-tagline: var(--vp-c-text-2);
---vp-home-hero-text: var(--vp-c-text-1);
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #6c2d26 50%,  // 深红棕色
-    #603d34 50%   // 深咖啡色
-  );
---vp-home-hero-image-filter: blur(44px);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--vp-c-brand-2));
+  --vp-home-hero-tagline: var(--vp-c-text-2);
+  --vp-home-hero-text: var(--vp-c-text-1);
+  
+  /* 背景色修改为根据提供的色调调整 */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #636362 50%, #b4b4b4 50%);
+  
+  /* 适当的模糊效果，保持一致的视觉风格 */
+  --vp-home-hero-image-filter: blur(44px);
 }
