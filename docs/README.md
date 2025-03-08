@@ -15,6 +15,10 @@ config:
           theme: brand
           text: Get Start!🥵
           link: /notes/READEME
+        -
+          theme: alt
+          text: Bilibili →
+          link: https://www.bilibili.com/video/BV1amAneGE3P/?share_source=copy_web&vd_source=f5ba8d05a6f8ef70bf543512bf322bc1          
   -
     type: features
     features:
