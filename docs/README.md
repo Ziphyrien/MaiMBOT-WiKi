@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: Get Start!🥵
-          link: /notes/READEME
+          link: /notes/1.项目介绍
         -
           theme: alt
           text: Bilibili →
