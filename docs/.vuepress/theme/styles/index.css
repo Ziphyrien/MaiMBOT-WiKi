@@ -1,33 +1,44 @@
-/* 动漫风格深色主题 */
 :root {
-  /* 标题渐变 - 提取图片中的炭黑与浅灰 */
+  /* 基础色调 */
+  --primary-dark: rgb(111,110,110);    /* 主深灰色 */
+  --primary-light: rgb(216,205,201);   /* 浅米色 */
+  --accent-gray: rgb(180,188,188);     /* 强调浅灰色 */
+
+  /* 渐变效果 */
+  --gradient-soft: linear-gradient(
+    135deg, 
+    var(--primary-light) 0%, 
+    var(--accent-gray) 50%,
+    rgba(216,205,201,0.2) 100%
+  );
+
+  /* 文字颜色 */
+  --vp-c-text-1: var(--primary-dark);
+  --vp-c-text-2: rgba(111,110,110,0.85);
+  
+  /* 主标题特效 */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
-    135deg, 
-    #4d4d4d 25%, 
-    #696969 50%,
-    #aaaaaa 75%
+    120deg,
+    var(--primary-light) 30%,
+    var(--accent-gray)
   );
   
-  /* 文本配色 - 结合图片亮色 */
-  --vp-home-hero-tagline: #c1c1c1; /* 匹配图片0.2%浅灰 */
-  --vp-home-hero-text: #fdfdfd;    /* 取自图片浅色细节 */
+  /* 副标题和描述文字 */
+  --vp-home-hero-tagline: var(--vp-c-text-2);
+  --vp-home-hero-desc: rgba(111,110,110,0.8);
   
-  /* 插图背景 - 使用图片主色过渡 */
-  --vp-home-hero-image-background-image: linear-gradient(
-    -30deg,
-    #1f1f1f 20%,  /* 最深色调 */
-    #4e4e4e 50%,  /* 次深色块 */
-    #6d6c6a 80%   /* 边缘灰调 */
-  );
+  /* 图片区域特效 */
+  --vp-home-hero-image-background-image: var(--gradient-soft);
+  --vp-home-hero-image-filter: blur(40px) saturate(150%);
   
-  /* 背景模糊与品牌色定义 */
-  --vp-home-hero-image-filter: blur(40px) brightness(0.9);
-  --vp-c-brand: #d1c0b9;          /* 图片中0.93%日系肤色 */
-  --vp-c-brand-light: #a9a9a9;    /* 图片浅灰 */
-  --vp-c-brand-lighter: #4a4a4a;  /* 中层灰色 */
+  /* 按钮样式 */
+  --vp-button-brand-bg: var(--accent-gray);
+  --vp-button-brand-hover-bg: rgb(160,170,170);
   
-  /* 修饰元素透明度 */
-  --vp-home-hero-name-opacity: 0.88;
-  --vp-button-brand-bg: rgba(209, 192, 185, 0.12); 
+  /* 边框样式 */
+  --vp-c-divider: var(--primary-light);
+  
+  /* 代码块样式 */
+  --vp-code-block-bg: rgba(216,205,201,0.15);
 }
