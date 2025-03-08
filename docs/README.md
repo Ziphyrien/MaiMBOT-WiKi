@@ -14,5 +14,5 @@ config:
         -
           theme: brand
           text: Get Start!
-          link: /notes/Windows部署教程.md
+          link: /notes/
 ---
