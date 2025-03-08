@@ -8,10 +8,10 @@ export default defineUserConfig({
   title: 'MaiMBOT 8aka WiKi',
   description: '',
 
-  head: 
+  head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/MaiM.png' }],
-
+  [,
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
