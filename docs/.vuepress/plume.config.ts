@@ -30,7 +30,7 @@ export default defineThemeConfig({
 
   /* 站点页脚 */
   footer: {
-    message: 'WiKi by <a target="_blank" href="https://space.bilibili.com/517481506?spm_id_from=333.1007.0.0">Ziphyrien ©2025</a>',
+    message: 'Bot by <a target="_blank" href="https://space.bilibili.com/9116293">千石可乐</a>＆WiKi by <a target="_blank" href="https://space.bilibili.com/517481506?spm_id_from=333.1007.0.0">Ziphyrien ©2025</a>',
   //   copyright: '',    
   },
 
