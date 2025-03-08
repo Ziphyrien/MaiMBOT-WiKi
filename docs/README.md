@@ -8,7 +8,7 @@ config:
     background: tint-plate
     hero:
       name: 麦麦Bot🤖
-      tagline: MaiMBOT!!!
+      tagline: MaiMBOT!
       text: 一款专注于 群组聊天 的赛博网友（非常专注）QQ BOT
       actions:
         -
