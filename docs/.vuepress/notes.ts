@@ -4,6 +4,7 @@ const root = defineNoteConfig({
   dir: '',
   link: '/docs/',
   sidebar: 'auto'
+})
 
 export const notes = defineNotesConfig({
   dir: 'notes',
