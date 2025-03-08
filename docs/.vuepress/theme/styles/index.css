@@ -1,12 +1,11 @@
 /* 雅致动漫风格配置 */
 :root {
-  /* 标题渐变 - 米白与栗色渐变 */
-  --vp-home-hero-name-color: transparent;
+  /* 标题渐变 - 从右下到左上的自然过渡 */
   --vp-home-hero-name-background: linear-gradient(
-    135deg, 
-    #d9cfcb 25%, 
-    #ae9990 65%, 
-    #6c2d26
+    to left top,  /* 逆向渐变方向 */
+    #d9cfcb 15%,  /* 起始点米白色 */
+    #ae9990 45%,  /* 过渡到蔷薇粉 */
+    #6c2d26 80%   /* 终点深红色 */
   );
 
   /* 文字配色 */
