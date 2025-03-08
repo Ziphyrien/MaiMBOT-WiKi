@@ -6,7 +6,7 @@ import { notes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: 'https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMSZ8shj5Csuj7E-bNV8POK_LF6v0gAAurGMRuICVlWac5rIkYU0sYBAAMCAAN3AAM2BA.png',
+  logo: '/MaiM.png',
 
   appearance: true,  // 配置 深色模式
 
