@@ -3,7 +3,7 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 const root = defineNoteConfig({
   dir: '',
   link: '/docs/',
-  sidebar: 'auto'
+  sidebar: 'auto',
 })
 
 export const notes = defineNotesConfig({
