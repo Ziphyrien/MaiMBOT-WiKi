@@ -4,12 +4,11 @@ externalLinkIcon: false
 config:
   -
     type: doc-hero
-    full: true
     image: /maimai.png
     hero:
       name: 麦麦🤖
-      tagline: Yes MaiMBOT!
-      text: 专注于群聊の赛博网友
+      tagline: 专注于群聊の赛博网友
+      text: Yes MaiMBOT!
       actions:
         -
           theme: brand
