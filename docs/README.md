@@ -13,8 +13,8 @@ config:
       actions:
         -
           theme: brand
-          text: Get Start!
-          link: /notes/
+          text: Get Start!🥵
+          link: /notes/READEME
   -
     type: features
     features:
