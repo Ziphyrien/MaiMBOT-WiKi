@@ -1,6 +1,7 @@
 /* 雅致动漫风格配置 */
 :root {
   /* 标题渐变 - 从右下到左上的自然过渡 */
+  --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
     to left top,  /* 逆向渐变方向 */
     #d9cfcb 15%,  /* 起始点米白色 */
