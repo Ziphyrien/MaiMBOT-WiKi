@@ -10,7 +10,7 @@ export default defineUserConfig({
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: 'https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMTZ8wJzxxiI4o2Ygv05-eRcIA7qdUAAr3EMRuICWFWJeNn6MDp6fABAAMCAAN4AAM2BA.png' }],
   ],
 
   bundler: viteBundler(),
