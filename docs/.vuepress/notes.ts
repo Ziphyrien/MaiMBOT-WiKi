@@ -17,6 +17,6 @@ export const notes = defineNotesConfig({
   link: '/',
   notes: [ 
     'root',
-    'deploy,
+    'deploy',
   ],
 })
