@@ -1,30 +1,31 @@
 /* 默认设置 */
 :root {
-  /* 名称渐变 - 使用推荐的米色系渐变 */
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(
-    135deg, 
-    #ae9990 25%, 
-    #d9cfcb 60%, 
-    #cbd9cf 85%
-  );
-  text-shadow: 2px 2px 4px rgba(38,38,37,0.1);
+  /* 标题文字 - 主品牌色 */
+  --vp-home-hero-name-color: #6c2d26; /* 保持您的深红色标识 */
+  --vp-home-hero-name-background: none; /* 移除原渐变 */
 
-  /* 文字配色 */
-  --vp-home-hero-tagline: #ae9990;  /* 推荐的浅砖红色 */
-  --vp-home-hero-text: #ffffff;     /* 纯白提升可读性 */
+  /* 文案配色 */
+  --vp-home-hero-tagline: #636362;  /* 中灰提升辨识度 */
+  --vp-home-hero-text: #262625;     /* 深灰确保可读性 */
 
-  /* 图像区域背景 */
+  /* 图像区背景 */
   --vp-home-hero-image-background-image: linear-gradient(
     45deg,
-    #603d34 30%,       /* 深咖色 */
-    #262625 70%        /* 炭黑色 */
+    rgba(203,213,217,0.15) 20%,   /* 推荐色#cbd5d9 15%透明 */
+    rgba(207,203,217,0.25) 80%    /* 推荐色#cfcbd9 25%透明 */
   );
   
-  /* 背景效果优化 */
-  --vp-home-hero-image-filter: blur(36px) saturate(150%) brightness(90%);
-  
-  /* 补充色 */
-  --vp-c-brand-2: #6c2d26;        /* 主按钮色 */
-  --vp-c-brand-soft: hsl(9, 32%, 55%, 0.2); /* 柔化品牌色 */
+  /* 视觉优化处理 */
+  --vp-home-hero-image-filter: blur(28px) 
+                               saturate(180%) 
+                               brightness(105%);
+
+  /* 次要元素配色 */
+  --vp-c-brand-2: #ae9990;        /* 应用推荐米色作为辅助色 */
+  --vp-c-brand-soft: rgba(174,153,144,0.12);
+}
+
+/* 添加背景渐晕效果 */
+.vp-home-hero-image {
+  box-shadow: inset 0 0 80px rgba(203,213,217,0.08);
 }
