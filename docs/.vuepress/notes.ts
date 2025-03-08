@@ -8,7 +8,7 @@ const root = defineNoteConfig({
 
 const deploy = defineNoteConfig({
   dir: '部署教程',
-  link: '/docs/deploy/',
+  link: '/deploy/',
   sidebar: 'auto',
 })
 
