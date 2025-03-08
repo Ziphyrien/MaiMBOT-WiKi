@@ -9,7 +9,7 @@ config:
     hero:
       name: 麦麦🤖
       tagline: Yes MaiMBOT!
-      text: 专注于群组聊天的赛博网友
+      text: 专注于群聊の赛博网友
       actions:
         -
           theme: brand
