@@ -5,7 +5,7 @@ config:
   -
     type: doc-hero
     full: true
-    image: /plume.svg
+    image: /maimai.png
     hero:
       name: 麦麦🤖
       tagline: Yes MaiMBOT!
