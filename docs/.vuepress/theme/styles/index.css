@@ -1,42 +1,34 @@
+/* 雅致动漫风格配置 */
 :root {
-  /* 标题系统 */
-  --vp-home-hero-name-color: #6c2d26; /*保留品牌深红色*/
-  
-  /* 文字配色体系 */
-  --vp-home-hero-tagline: #636362;  /*保持原中灰色*/
-  --vp-home-hero-text: #403d3d;     /*调整深色增加对比度*/
+  /* 标题渐变 - 米白与栗色渐变 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg, 
+    #d9cfcb 25%, 
+    #ae9990 65%, 
+    #6c2d26
+  );
 
-  /* ███ 关键优化点 █████████████████ */
-  /* 视觉分层背景 */
-  --vp-home-hero-image-background-image: 
-    radial-gradient(
-      circle at 70% 30%, 
-      rgba(203,213,217,0.25) 0%,  /*推荐色#cbd5d9带透明度*/
-      rgba(255,255,255,0) 60%
-    ),
-    linear-gradient(
-      30deg,
-      rgba(174,153,144,0.15) 10%,  /*推荐色#ae9990带透明度*/
-      rgba(207,203,217,0.12) 90%   /*推荐色#cfcbd9淡紫色*/
-    );
-  
-  --vp-home-hero-image-filter: blur(36px) 
-                               brightness(102%) 
-                               contrast(110%);
+  /* 文字配色 */
+  --vp-home-hero-tagline: #262625;         /* 深灰-正文字色 */
+  --vp-home-hero-text: #603d34;            /* 茶褐色-强调色 */
 
-  /* ███ 按钮状态系统 █████████████ */
-  --vp-c-brand-1: #9e9a98;    /*初始态-主色调米灰*/
-  --vp-c-brand-2: #6c2d26;    /*悬停态-深红配色*/
-  --vp-c-brand-3: #3d211e;    /*点击态-更深红*/
-  
-  --vp-button-brand-border: #d9cfcb;       /*主色调边界线*/
-  --vp-button-brand-hover-border: #ae9990; /*悬停边界色*/
-}
+  /* 插画背景设置 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    45deg,
+    #cfcbd9 0%,       /* 淡紫灰 */
+    #cbd5d9 50%,      /* 冰蓝灰 */
+    #ffffff 100%
+  );
+  --vp-home-hero-image-filter: blur(32px) saturate(150%);
 
-/* 动态优化 */
-.vp-home-hero-image {
-  transition: filter 0.3s ease;
-  &:hover {
-    filter: var(--vp-home-hero-image-filter) saturate(150%);
-  }
+  /* 品牌色系适配 */
+  --vp-c-brand-1: #6c2d26;                /* 胭脂红-主品牌色 */
+  --vp-c-brand-2: #603d34;                /* 深赤茶-辅助色 */
+  --vp-c-brand-soft: #ae999066;           /* 半透明蔷薇色 */
+
+  /* UI辅助色 */
+  --vp-button-brand-bg: #6c2d26;          /* 按钮主色 */
+  --vp-button-brand-hover-bg: #603d34;    /* 按钮悬停色 */
+  --vp-link-color: #9e9a98;               /* 链接浅灰 */
 }
