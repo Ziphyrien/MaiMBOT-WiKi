@@ -3,7 +3,9 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 const root = defineNoteConfig({
   dir: '',
   link: '/docs/',
-  sidebar: 'auto',
+  sidebar: [
+    { text: '项目介绍', link: '项目介绍' },
+  ]
 })
 
 const deploy = defineNoteConfig({
