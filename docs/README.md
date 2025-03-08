@@ -3,9 +3,9 @@ pageLayout: home
 externalLinkIcon: false
 config:
   -
-    type: hero
+    type: doc-hero
     full: true
-    background: tint-plate
+    image: /maimai.png
     hero:
       name: 麦麦Bot🤖
       tagline: MaiMBOT!
