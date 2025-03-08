@@ -1,30 +1,30 @@
-/* 中性动漫风格配色方案 */
+/* 默认设置 */
 :root {
-  /* 主标题渐变 - 浅肤色到柔玫瑰渐变 */
+  /* 名称渐变 - 使用推荐的米色系渐变 */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(
-    145deg,
-    #e1d8d6 25%,
-    #c1a3a0 60%,
-    #59342a 85%
+    135deg, 
+    #ae9990 25%, 
+    #d9cfcb 60%, 
+    #cbd9cf 85%
   );
+  text-shadow: 2px 2px 4px rgba(38,38,37,0.1);
 
-  /* 辅助文字配色 */
-  --vp-home-hero-tagline: #e1d8d6;   /* 浅灰粉增加可读性 */
-  --vp-home-hero-text: #beb4bc;      /* 灰紫色文字 */
+  /* 文字配色 */
+  --vp-home-hero-tagline: #ae9990;  /* 推荐的浅砖红色 */
+  --vp-home-hero-text: #ffffff;     /* 纯白提升可读性 */
 
-  /* 人物背景效果 - 深色双拼底纹 */
+  /* 图像区域背景 */
   --vp-home-hero-image-background-image: linear-gradient(
-    -35deg,
-    #322422 40%,
-    #59342a 60%
+    45deg,
+    #603d34 30%,       /* 深咖色 */
+    #262625 70%        /* 炭黑色 */
   );
   
-  /* 背景特效调整 */
-  --vp-home-hero-image-filter: blur(36px) saturate(1.1);
+  /* 背景效果优化 */
+  --vp-home-hero-image-filter: blur(36px) saturate(150%) brightness(90%);
   
-  /* 补充品牌色定义（增强配色一致性） */
-  --vp-c-brand-1: #988c94;    /* 中灰紫 */
-  --vp-c-brand-2: #59342a;    /* 深红棕 */
-  --vp-c-brand-soft: #322422; /* 背景基底色 */
+  /* 补充色 */
+  --vp-c-brand-2: #6c2d26;        /* 主按钮色 */
+  --vp-c-brand-soft: hsl(9, 32%, 55%, 0.2); /* 柔化品牌色 */
 }
