@@ -1,9 +1,30 @@
-/* 默认设置，可以在 `index.css` 中覆盖 */
+/* 中性动漫风格配色方案 */
 :root {
+  /* 主标题渐变 - 浅肤色到柔玫瑰渐变 */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--vp-c-brand-2));
-  --vp-home-hero-tagline: var(--vp-c-text-2);
-  --vp-home-hero-text: var(--vp-c-text-1);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-soft) 50%, var(--vp-c-brand-2) 50%);
-  --vp-home-hero-image-filter: blur(44px);
+  --vp-home-hero-name-background: linear-gradient(
+    145deg,
+    #e1d8d6 25%,
+    #c1a3a0 60%,
+    #59342a 85%
+  );
+
+  /* 辅助文字配色 */
+  --vp-home-hero-tagline: #e1d8d6;   /* 浅灰粉增加可读性 */
+  --vp-home-hero-text: #beb4bc;      /* 灰紫色文字 */
+
+  /* 人物背景效果 - 深色双拼底纹 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    -35deg,
+    #322422 40%,
+    #59342a 60%
+  );
+  
+  /* 背景特效调整 */
+  --vp-home-hero-image-filter: blur(36px) saturate(1.1);
+  
+  /* 补充品牌色定义（增强配色一致性） */
+  --vp-c-brand-1: #988c94;    /* 中灰紫 */
+  --vp-c-brand-2: #59342a;    /* 深红棕 */
+  --vp-c-brand-soft: #322422; /* 背景基底色 */
 }
