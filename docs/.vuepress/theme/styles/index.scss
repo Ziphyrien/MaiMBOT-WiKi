@@ -1,28 +1,12 @@
-// 主题色变量定义
-$color-light-beige: #d9cfcb;
-$color-dark-gray: #636362;
-$color-medium-gray: #acacac;
-$color-dark-brown: #262625;
-$color-light-gray: #9e9a98;
-$color-deep-brown: #6c2d26;
-$color-muted-gray: #b4b4b4;
-$color-rich-brown: #603d34;
-
-// 图片背景色设置
-.hero-image {
-  background-color: $color-light-beige; // 设置背景色为浅米色
-  background-image: url('path/to/your/image.jpg');
-  background-size: cover;
-  background-position: center;
-  filter: blur(44px); // 应用模糊效果
-}
-
-// 文本颜色设置
-.hero-text {
-  color: $color-dark-brown; // 设置文本颜色为深棕色
-}
-
-// 其他元素的颜色设置
-.hero-tagline {
-  color: $color-muted-gray; // 设置副标题颜色为柔和灰色
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, var(--vp-c-purple-1) 30%, var(--vp-c-brand-2));
+  --vp-home-hero-tagline: var(--vp-c-text-2);
+  --vp-home-hero-text: var(--vp-c-text-1);
+  
+  /* 背景色修改为根据提供的色调调整 */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #636362 50%, #b4b4b4 50%);
+  
+  /* 适当的模糊效果，保持一致的视觉风格 */
+  --vp-home-hero-image-filter: blur(44px);
 }
