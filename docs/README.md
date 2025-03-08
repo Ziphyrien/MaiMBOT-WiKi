@@ -4,7 +4,7 @@ externalLinkIcon: false
 config:
   -
     type: doc-hero
-    image: /maimai.png
+    image: docs/.vuepress/public/maimai.png
     hero:
       name: 麦麦🤖
       tagline: 专注于群聊の赛博网友
