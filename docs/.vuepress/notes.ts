@@ -13,7 +13,7 @@ const projectIntro = defineNoteConfig({
 // 部署教程配置
 const deploymentTutorial = defineNoteConfig({
   dir: '部署教程',
-  link: '/deploy/',
+  link: '/deploy',
   sidebar: [
     'README.md',    // 部署前言
     '准备工作.md',
@@ -22,7 +22,7 @@ const deploymentTutorial = defineNoteConfig({
 })
 
 export default defineNotesConfig({
-  dir: '/notes/',
+  dir: 'notes',
   link: '/',
   notes: [
     projectIntro,
