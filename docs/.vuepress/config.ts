@@ -15,7 +15,7 @@ export default defineUserConfig({
     content: `\
 硅基API注册说明
 - 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
-- 送2000 万 Tokens
+- 你我都将得到2000 万 Tokens，互利互惠！
 `,
     } 
   
