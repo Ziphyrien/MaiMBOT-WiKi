@@ -9,7 +9,8 @@ const root = defineNoteConfig({
       text: '开始部署',      
       link: '/deploy/reademe/',
       items: [
-        '部署教程/准备工作'    
+        '部署教程/准备工作/安装Python',
+        '部署教程/准备工作/编辑器',
       ],  
     },
   ],  
