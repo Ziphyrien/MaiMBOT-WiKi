@@ -7,6 +7,10 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'MaiMBOT 8aka WiKi',
   description: '',
+
+  enhance({ app }) {
+    app.component('RepoCard', RepoCard)
+  },
   
   head: [
     // 配置站点图标
