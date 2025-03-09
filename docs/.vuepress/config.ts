@@ -8,6 +8,17 @@ export default defineUserConfig({
   title: 'MaiMBOT 8aka WiKi',
   description: '',
 
+  bulletin: {
+    layout: 'top-right',
+    title: '公告板标题',
+    contentType: 'markdown', 
+    content: `\
+硅基API注册说明
+- 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
+- 送2000 万 Tokens
+`,
+    } 
+  
   head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/MaiM.png' }],
