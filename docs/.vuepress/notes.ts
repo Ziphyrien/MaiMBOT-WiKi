@@ -12,7 +12,7 @@ const root = defineNoteConfig({
         {
           text: '部署',
           items: [
-          '准备工作'
+            '准备工作'
           ],
         },
       ],  
