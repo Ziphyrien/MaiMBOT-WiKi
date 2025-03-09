@@ -8,7 +8,11 @@ const root = defineNoteConfig({
     {
       dir: '部署教程',
       link: '/deploy/',
-      sidebar: 'auto',
+      text: '部署'
+      sidebar: [
+        '项目介绍'
+        'README'
+      ],  
     },
   ],  
 })
