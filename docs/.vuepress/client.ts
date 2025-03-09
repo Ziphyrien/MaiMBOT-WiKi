@@ -1,4 +1,11 @@
+import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import { defineClientConfig } from 'vuepress/client'
+
+export default defineClientConfig({
+  enhance({ app }) {
+    app.component('RepoCard', RepoCard)
+  },
+})
 
 import './theme/styles/index.scss'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
