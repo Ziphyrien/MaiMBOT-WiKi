@@ -7,7 +7,7 @@ const root = defineNoteConfig({
     '项目介绍',
     {
       text: '开始部署',
-      link: '/deploy/',
+      prefix: '/deploy/',
       items: [
         '部署教程/准备工作'
       ],  
