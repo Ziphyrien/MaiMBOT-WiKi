@@ -1,12 +1,5 @@
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import { defineClientConfig } from 'vuepress/client'
-
-export default defineClientConfig({
-  enhance({ app }) {
-    app.component('RepoCard', RepoCard)
-  },
-})
-
 import './theme/styles/index.scss'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
@@ -20,7 +13,7 @@ import './theme/styles/index.scss'
 export default defineClientConfig({
   enhance({ app }) {
     // built-in components
-    // app.component('RepoCard', RepoCard)
+    app.component('RepoCard', RepoCard)
     // app.component('NpmBadge', NpmBadge)
     // app.component('NpmBadgeGroup', NpmBadgeGroup)
     // app.component('Swiper', Swiper) // you should install `swiper`
