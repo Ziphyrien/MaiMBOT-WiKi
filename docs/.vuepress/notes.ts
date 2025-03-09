@@ -3,7 +3,7 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 
 // 项目介绍配置
 const projectIntro = defineNoteConfig({
-  dir: '',  // 直接在notes目录下
+  dir: ' ',  // 直接在notes目录下
   link: '/',
   sidebar: [
     '1.项目介绍.md'  // 直接引用根目录下的文件
