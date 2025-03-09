@@ -4,7 +4,7 @@ const root = defineNoteConfig({
   dir: '',
   link: '/docs/',
   sidebar: [
-    '项目介绍.md',
+    '项目介绍',
     {
       dir: '部署教程',
       link: '/deploy/',
