@@ -6,15 +6,9 @@ const root = defineNoteConfig({
   sidebar: [
     '项目介绍',
     {
-      dir: '部署教程',
-      link: '/deploy/',
-      sidebar: [
-        {
-          text: '部署',
-          items: [
-            '准备工作'
-          ],
-        },
+      text: '开始部署',
+      items: [
+        '部署教程/准备工作'
       ],  
     },
   ],  
