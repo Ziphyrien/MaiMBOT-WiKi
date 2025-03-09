@@ -17,7 +17,7 @@ export default defineUserConfig({
 - 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
 - 你我都将得到2000 万 Tokens，互利互惠！
 `,
-  }， 
+  }, 
   
   head: [
     // 配置站点图标
