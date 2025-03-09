@@ -1,5 +1,5 @@
 ---
-title: 前期准备
+title: 安装Python
 permalink: /deploy/prepare/
 
 ---
