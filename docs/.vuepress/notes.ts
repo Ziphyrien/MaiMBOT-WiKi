@@ -4,14 +4,13 @@ const root = defineNoteConfig({
   dir: '',
   link: '/docs/',
   sidebar: [
-    '项目介绍.md', // 修正为字符串格式
+    '项目介绍.md',
     {
       dir: '部署教程',
       link: '/deploy/',
-      text: '部署'
-      sidebar: [
-        '项目介绍'
-        'README'
+      text: '部署', 
+      sidebar: [    
+        '准备工作.md'
       ],  
     },
   ],  
