@@ -38,6 +38,7 @@ export default defineUserConfig({
     content: `\
 - 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
 - 你我都将得到2000 万 Tokens，互利互惠！
+- ![硅基活动规则](https://zip-image.pages.dev/file/AgACAgUAAyEGAASIL8CVAAMqZ83AKE188QNtrKsefztNBC8mcCwAAivFMRsDfHBWHUT_xHxasE4BAAMCAAN4AAM2BA.png)
   `,
   },
     
