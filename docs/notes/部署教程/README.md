@@ -1,6 +1,6 @@
 ---
 title: 一言
-permalink: /deploy/reademe
+permalink: /deploy/reademe/
 ---
 注意！此为*Windows部署教程* Docker由于不完善故不做教程
 
