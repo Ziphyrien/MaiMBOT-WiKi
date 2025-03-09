@@ -1,6 +1,6 @@
 ---
 title: 安装Python
-permalink: /deploy/prepare/
+permalink: /deploy/prepare/python
 
 ---
 
