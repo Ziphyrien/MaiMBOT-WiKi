@@ -11,6 +11,7 @@ const root = defineNoteConfig({
       items: [
         '部署教程/准备工作',
         '部署教程/编辑器',
+        '部署教程/连不上Github怎么办',
       ],  
     },
   ],  
