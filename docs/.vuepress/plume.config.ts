@@ -13,7 +13,7 @@ export default defineThemeConfig({
   social: [
     { icon: 'github', link: 'https://github.com/SengokuCola/MaiMBot/' },
     { icon: 'qq', link: 'https://qm.qq.com/q/kdJox0XMXK' },
-    { icon: 'mail', link: 'https://qm.qq.com/q/kdJox0XMXK' }
+    { icon: 'mail', link: 'https://qm.qq.com/q/kdJox0XMXK' },
   ],
   navbarSocialInclude: ['github','qq','mail'], // 允许显示在导航栏的 social 社交链接
   // aside: true, // 页内侧边栏， 默认显示在右侧
