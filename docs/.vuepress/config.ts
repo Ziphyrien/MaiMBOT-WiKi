@@ -1,4 +1,3 @@
-import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
@@ -8,10 +7,6 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'MaiMBOT 8aka WiKi',
   description: '',
-
-  enhance({ app }) {
-    app.component('RepoCard', RepoCard)
-  },
   
   head: [
     // 配置站点图标
