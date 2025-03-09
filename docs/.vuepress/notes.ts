@@ -22,7 +22,7 @@ const deploymentTutorial = defineNoteConfig({
 })
 
 export default defineNotesConfig({
-  dir: 'notes',
+  dir: '/notes/',
   link: '/',
   notes: [
     projectIntro,
