@@ -1,28 +1,31 @@
-import { defineUserConfig } from 'vuepress'
-import { plumeTheme } from 'vuepress-theme-plume'
+// .vuepress/notes.ts
+import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 
-export default defineUserConfig({
-  theme: plumeTheme({
-    notes: {
-      notes: [
-        // 根目录笔记配置
-        {
-          dir: '.',          // 对应 /notes/ 根目录
-          link: '/',         // 文档链接直接位于站点根路径
-          sidebar: [
-            {
-              text: '项目文档',
-              items: ['1.项目介绍']  // 对应 /notes/1.项目介绍.md
-            }
-          ]
-        },
-        // 部署教程笔记配置
-        {
-          dir: '部署教程',    // 对应 /notes/部署教程 目录
-          link: '/deploy/',  // 文档链接前缀为 /deploy/
-          sidebar: 'auto'     // 自动生成层级侧边栏
-        }
-      ]
-    }
-  })
+// 项目介绍配置
+const projectIntro = defineNoteConfig({
+  dir: '',  // 直接在notes目录下
+  link: '/',
+  sidebar: [
+    '1.项目介绍.md'  // 直接引用根目录下的文件
+  ]
+})
+
+// 部署教程配置
+const deploymentTutorial = defineNoteConfig({
+  dir: '部署教程',
+  link: '/deploy/',
+  sidebar: [
+    'README.md',    // 部署前言
+    '准备工作.md',
+    // 如果有其他部署相关文档可继续添加
+  ]
+})
+
+export default defineNotesConfig({
+  dir: '/notes/',
+  link: '/',
+  notes: [
+    projectIntro,
+    deploymentTutorial
+  ]
 })
