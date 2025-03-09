@@ -11,13 +11,15 @@ export default defineUserConfig({
   bulletin: {
     layout: 'top-right',
     title: '公告板标题',
-    contentType: 'markdown', 
+    contentType: 'markdown',
     content: `\
 硅基API注册说明
+
 - 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
 - 你我都将得到2000 万 Tokens，互利互惠！
-`,
-  }, 
+  `, // 注意这里添加的空行
+  },
+
   
   head: [
     // 配置站点图标
