@@ -7,18 +7,6 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'MaiMBOT 8aka WiKi',
   description: '',
-
-  bulletin: {
-    layout: 'top-right',
-    title: '硅基API注册说明',
-    enablePage: true,
-    contentType: 'markdown',
-    content: `\
-- 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
-- 你我都将得到2000 万 Tokens，互利互惠！
-  `,
-  },
-
   
   head: [
     // 配置站点图标
@@ -42,6 +30,17 @@ export default defineUserConfig({
     // contributors: true,
     // changelog: false,
 
+  bulletin: {
+    layout: 'top-right',
+    title: '硅基API注册说明',
+    enablePage: true,
+    contentType: 'markdown',
+    content: `\
+- 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo)
+- 你我都将得到2000 万 Tokens，互利互惠！
+  `,
+  },
+    
     /**
      * 博客
      * @see https://theme-plume.vuejs.press/config/basic/#blog
