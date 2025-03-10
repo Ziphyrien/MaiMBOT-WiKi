@@ -179,7 +179,7 @@ export default defineUserConfig({
        * 评论 comments
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
-      // comment: {
+      comment: {
         provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
         comment: true,
         repo: 'Ziphyrien/MaiMBOT-WiK',
@@ -189,7 +189,7 @@ export default defineUserConfig({
       //   mapping: 'pathname',
       //   reactionsEnabled: true,
       //   inputPosition: 'top',
-      // },
+      },
     },
 
     /**
