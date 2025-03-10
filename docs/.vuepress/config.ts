@@ -20,8 +20,8 @@ export default defineUserConfig({
     hostname: 'https://maimbot.pages.dev',
 
     /* 文档仓库配置，用于 editLink */
-    // docsRepo: '',
-    // docsDir: 'docs',
+    docsRepo: 'https://github.com/Ziphyrien/MaiMBOT-WiKi',
+    docsDir: 'docs',
     // docsBranch: '',
 
     /* 页内信息 */
