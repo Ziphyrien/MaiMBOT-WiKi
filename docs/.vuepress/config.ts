@@ -180,12 +180,12 @@ export default defineUserConfig({
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
       // comment: {
-      //   provider: '', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-      //   comment: true,
-      //   repo: '',
-      //   repoId: '',
-      //   category: '',
-      //   categoryId: '',
+        provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+        comment: true,
+        repo: 'Ziphyrien/MaiMBOT-WiK',
+        repoId: 'R_kgDOOE1EPw',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOOE1EP84CnxUT',
       //   mapping: 'pathname',
       //   reactionsEnabled: true,
       //   inputPosition: 'top',
