@@ -27,9 +27,10 @@ export default defineUserConfig({
     /* 页内信息 */
     // editLink: true,
     // lastUpdated: true,
-    // contributors: true,
-    // changelog: false,
-
+    contributors: { mode: 'block' },
+    changelog: { maxCount: 10 },
+  
+  
   bulletin: {
     layout: 'top-right',
     title: '硅基API注册说明',
