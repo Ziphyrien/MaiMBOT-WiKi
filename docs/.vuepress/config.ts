@@ -182,7 +182,7 @@ export default defineUserConfig({
       comment: {
         provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
         comment: true,
-        repo: 'Ziphyrien/MaiMBOT-WiK',
+        repo: 'Ziphyrien/MaiMBOT-WiKi',
         repoId: 'R_kgDOOE1EPw',
         category: 'Announcements',
         categoryId: 'DIC_kwDOOE1EP84CnxUT',
