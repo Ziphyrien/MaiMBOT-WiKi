@@ -184,7 +184,7 @@ export default defineUserConfig({
         comment: true,
         repo: 'Ziphyrien/MaiMBOT-WiKi',
         repoId: 'R_kgDOOE1EPw',
-        category: 'Announcements',
+        category: 'General',
         categoryId: 'DIC_kwDOOE1EP84CnxUU',
       //   mapping: 'pathname',
       //   reactionsEnabled: true,
