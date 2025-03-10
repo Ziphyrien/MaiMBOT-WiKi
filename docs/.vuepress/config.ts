@@ -180,12 +180,12 @@ export default defineUserConfig({
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
       comment: {
-        provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+        provider: 'General', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
         comment: true,
         repo: 'Ziphyrien/MaiMBOT-WiKi',
         repoId: 'R_kgDOOE1EPw',
         category: 'Announcements',
-        categoryId: 'DIC_kwDOOE1EP84CnxUT',
+        categoryId: 'DIC_kwDOOE1EP84CnxUU',
       //   mapping: 'pathname',
       //   reactionsEnabled: true,
       //   inputPosition: 'top',
