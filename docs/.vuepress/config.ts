@@ -30,7 +30,14 @@ export default defineUserConfig({
     contributors: { mode: 'block' },
     changelog: { maxCount: 10 },
   
-  
+    // 预连接到字体服务
+    ["link", { rel: "preconnect", href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest", crossorigin: "anonymous" }],
+    // 导入 LXGW Wenkai 字体样式表
+    ["link", {
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css"
+    }],
+    
   bulletin: {
     layout: 'top-right',
     title: '硅基API注册说明',
