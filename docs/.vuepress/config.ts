@@ -11,6 +11,13 @@ export default defineUserConfig({
   head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/MaiM.png' }],
+        // 预连接到字体服务
+    ["link", { rel: "preconnect", href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest", crossorigin: "anonymous" }],
+    // 导入 LXGW Wenkai 字体样式表
+    ["link", {
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css"
+    }],
   ],
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
@@ -29,14 +36,6 @@ export default defineUserConfig({
     // lastUpdated: true,
     contributors: { mode: 'block' },
     changelog: { maxCount: 10 },
-  
-    // 预连接到字体服务
-    ["link", { rel: "preconnect", href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest", crossorigin: "anonymous" }],
-    // 导入 LXGW Wenkai 字体样式表
-    ["link", {
-      rel: "stylesheet",
-      href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css"
-    }],
     
     bulletin: {
       layout: 'top-right',
