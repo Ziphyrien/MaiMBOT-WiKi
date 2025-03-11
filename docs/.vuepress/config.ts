@@ -38,16 +38,16 @@ export default defineUserConfig({
       href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css"
     }],
     
-  bulletin: {
-    layout: 'top-right',
-    title: '硅基API注册说明',
-    enablePage: true,
-    contentType: 'markdown',
-    content: `\
+    bulletin: {
+      layout: 'top-right',
+      title: '硅基API注册说明',
+      enablePage: true,
+      contentType: 'markdown',
+      content: `\
 - 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo) 含有我的**邀请码**
 - 你我都将得到2000 万 Tokens，互利互惠！
-  `,
-  },
+    `,
+    },
     
     /**
      * 博客
