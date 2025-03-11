@@ -9,4 +9,23 @@
   
   /* 适当的模糊效果，保持一致的视觉风格 */
   --vp-home-hero-image-filter: blur(44px);
+
+  // 设置字体
+  $font-family: 'LXGW Wenkai', sans-serif;
+  $font-family-mono: 'LXGW WenKai Mono', monospace;
+
+  // 设置全局字体
+  body, h1, h2, h3, h4, h5, h6, p, span, div, a, ul, ol, li, table, th, td, pre, code, kbd, samp {
+    font-family: $font-family;
+  }
+
+  // 设置标题的字体和粗细
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  // 设置代码的字体
+  code, pre, kbd, samp {
+    font-family: $font-family-mono;
+  }  
 }
