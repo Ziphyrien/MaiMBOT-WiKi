@@ -8,13 +8,11 @@ export default defineUserConfig({
   title: 'MaiMBOT 8aka WiKi',
   description: '',
 
-module.exports = {
   markdown: {
     anchor: {
-      slugify: (s) => encodeURIComponent(s)  // 直接保留中文（部分浏览器可能不支持）
+      slugify: (s) => s // 直接返回原始字符串（禁用编码）
     }
-  }
-};
+  },
   
   head: [
     // 配置站点图标
