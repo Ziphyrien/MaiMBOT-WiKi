@@ -7,6 +7,14 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'MaiMBOT 8aka WiKi',
   description: '',
+
+module.exports = {
+  markdown: {
+    anchor: {
+      slugify: (s) => encodeURIComponent(s)  // 直接保留中文（部分浏览器可能不支持）
+    }
+  }
+};
   
   head: [
     // 配置站点图标
