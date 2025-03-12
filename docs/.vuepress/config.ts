@@ -8,12 +8,6 @@ export default defineUserConfig({
   title: 'MaiMBOT 8aka WiKi',
   description: '',
 
-  markdown: {
-    anchor: {
-      slugify: (s) => s // 直接返回原始字符串（禁用编码）
-    }
-  },
-  
   head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/MaiM.png' }],
@@ -31,13 +25,6 @@ export default defineUserConfig({
   theme: plumeTheme({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
     hostname: 'https://maimbot.pages.dev',
-
-    // 主题配置需要额外指定 markdown 行为
-    markdown: {
-      anchor: {
-        slugify: (s) => s // 主题内部需要同步配置
-      }
-    },
     
     /* 文档仓库配置，用于 editLink */
     docsRepo: 'https://github.com/Ziphyrien/MaiMBOT-WiKi',
