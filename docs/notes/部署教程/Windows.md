@@ -1,6 +1,7 @@
 ---
-title: 准备工作
-permalink: /deploy/prepare/
+title: Windows部署
+permalink: /deploy/windows/
+createTime: 2025/03/12 15:31:15
 ---
 ## 一：安装Python环境
 
@@ -215,7 +216,7 @@ setx path "%path%;C:\Program Files\MongoDB\Server\8.0\bin" /M
 
 ## 四：获取MaiMBot主体
 
-如果无法访问到Github请尝试使用[Steam++](https://steampp.net/)，软件使用[教程](/deploy/prepare/visit-git/)
+如果无法访问到Github请尝试使用[Steam++](https://steampp.net/)，软件使用[教程](/tool/visit-git/)
 
 **GitHub获取**  
 访问项目[仓库](https://github.com/SengokuCola/MaiMBot)，切换到debug分支下

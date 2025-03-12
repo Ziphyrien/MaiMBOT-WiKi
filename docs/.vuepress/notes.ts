@@ -9,11 +9,25 @@ const root = defineNoteConfig({
       text: '开始部署',      
       link: '/deploy/reademe/',
       items: [
-        '部署教程/准备工作',
-        '部署教程/编辑器',
-        '部署教程/连不上Github怎么办',
+        '部署教程/Windows',
+        {text: '面向新手的Linux部署', link: 'https://github.com/SengokuCola/MaiMBot/blob/main/docs/linux_deploy_guide_for_beginners.md'},
+        {text: 'Linux部署', link: 'https://github.com/SengokuCola/MaiMBot/blob/debug/docs/manual_deploy_linux.md'}
       ],  
     },
+    {
+      text: '配置文件说明',
+      link: '/config/readme/',
+      items: [
+        '配置文件教程/Config'
+      ]
+    },
+    {
+      text: '工具',
+      items: [
+        '工具/编辑器',
+        '工具/连不上Github怎么办'
+      ]
+    }
   ],  
 })
 
