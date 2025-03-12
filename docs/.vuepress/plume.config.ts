@@ -31,7 +31,7 @@ export default defineThemeConfig({
 
   /* 站点页脚 */
   footer: {
-    message: 'Copyright © 2025-present <a target="_blank" href="https://space.bilibili.com/517481506?spm_id_from=333.1007.0.0">Ziphyrien ©2025</a>',
+    message: 'Copyright © 2025-present <a target="_blank" href="https://space.bilibili.com/517481506?spm_id_from=333.1007.0.0">Ziphyrien</a>',
   //   copyright: '',    
   },
 
