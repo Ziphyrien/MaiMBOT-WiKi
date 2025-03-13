@@ -5,6 +5,7 @@ const root = defineNoteConfig({
   link: '/',
   sidebar: [
     '项目介绍',
+    'How-To-Ask-Questions-The-Smart-Way',
     {
       text: '开始部署',      
       link: '/deploy/reademe/',
