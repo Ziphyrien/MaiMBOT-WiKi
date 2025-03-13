@@ -3,10 +3,6 @@ createTime: 2024/11/19 19:56:00
 permalink: /tools/dev-sidecar/
 ---
 
-> 搬自项目README
->
-> <RepoCard repo="docmirror/dev-sidecar" />
-
 开发者边车，命名取自service-mesh的service-sidecar，意为为开发者打辅助的边车工具（以下简称ds）
 通过本地代理的方式将https请求代理到一些国内的加速通道上
 
@@ -101,10 +97,6 @@ permalink: /tools/dev-sidecar/
 > Ubuntu: 请选择DevSidecar-x.x.x.deb
 > 其他linux: 请选择DevSidecar-x.x.x.AppImage (未做测试，不保证能用)
 
-> linux安装说明请参考 [linux安装文档](./doc/linux.md)
-
-> 注意：由于没有买应用证书，所以应用在下载安装时会有“未知发行者”等安全提示，选择保留即可。
-
 #### 2）安装后打开
 
 > 注意：mac版安装需要在“系统偏好设置->安全性与隐私->通用”中解锁并允许应用安装
@@ -115,23 +107,16 @@ permalink: /tools/dev-sidecar/
 
 第一次打开会提示安装证书，根据提示操作即可
 
-更多有关根证书的说明，请参考 [为什么要安装根证书?](./doc/caroot.md)
-
-> 根证书是本地随机生成的，所以不用担心根证书的安全问题（本应用不收集任何用户信息）
-> 你也可以在加速服务设置中自定义根证书（PEM格式的证书与私钥）
-
-> 火狐浏览器需要[手动安装证书](#3浏览器打开提示证书不受信任)
-
 #### 4）开始加速吧
 
 去试试打开github
 
 ### 2.2、开启前 vs 开启后
 
-|          | 开启前                         | 开启后                                            |
-| -------- | ------------------------------ | ------------------------------------------------- |
-| 头像     | ![](/dev-sidecar/avatar2.png)         | ![](/dev-sidecar/avatar1.png)                            |
-| clone    | ![](/dev-sidecar/clone-before.png)    | ![](/dev-sidecar/clone.png)                              |
+|          | 开启前                     | 开启后                              |
+| -------- | -------------------------- | ----------------------------------- |
+| 头像     | ![](/dev-sidecar/avatar2.png) | ![](/dev-sidecar/avatar1.png)       |
+| clone    | ![](/dev-sidecar/clone-before.png) | ![](/dev-sidecar/clone.png)         |
 | zip 下载 | ![](/dev-sidecar/download-before.png) | ![](/dev-sidecar/download.png)秒下的，实在截不到速度的图 |
 
 ## 三、模式说明
@@ -142,7 +127,7 @@ permalink: /tools/dev-sidecar/
 - 最安全，无需安装证书，可以在浏览器地址栏左侧查看域名证书
 - 功能也最弱，只有特性1，相当于查询github的国外ip，手动改hosts一个意思。
 - github的可访问性不稳定，取决于IP测速，如果有绿色ip存在，就 `有可能` 可以直连访问。
-  ![](./doc/speed.png)
+  ![](/dev-sidecar/speed.png)
 
 ### 3.2、默认模式
 
@@ -179,40 +164,28 @@ permalink: /tools/dev-sidecar/
 
 ### 5.1、拦截配置
 
-没有配置域名的不会拦截，其他根据配置进行拦截处理
-
 ```js
 const intercepts = {
-  // 要拦截的域名
   'github.com': {
-    // 需要拦截url的正则表达式
     '/.*/.*/releases/download/': {
-      // 拦截类型
-      // redirect: url,          // 临时重定向（url会变，一些下载资源可以通过此方式配置）
-      // proxy: url,             // 代理（url不会变，没有跨域问题）
-      // abort: true,            // 取消请求（适用于被***封锁的资源，找不到替代，直接取消请求，快速失败，节省时间）
-      // success: true,          // 直接返回成功请求（某些请求不想发出去，可以伪装成功返回）
-      // cacheDays: 1,           // GET请求的使用缓存，单位：天（常用于一些静态资源）
-      // options: true,          // OPTIONS请求直接返回成功请求（该功能存在一定风险，请谨慎使用）
-      // optionsMaxAge: 2592000, // OPTIONS请求缓存时间，默认：2592000（一个月）
       redirect: 'download.fastgit.org'
     },
     '.*': {
       proxy: 'github.com',
-      sni: 'baidu.com' // 修改sni，规避***握手拦截
+      sni: 'baidu.com'
     }
   },
   'ajax.googleapis.com': {
     '.*': {
-      proxy: 'ajax.loli.net', // 代理请求，url不会变
-      backup: ['ajax.proxy.ustclug.org'], // 备份，当前代理请求失败后，将会切换到备用地址
+      proxy: 'ajax.loli.net',
+      backup: ['ajax.proxy.ustclug.org'],
       test: 'ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',
-      replace: '/(.*)/xxx'// 当加速地址的链接和原链接不是完全相同时，可以通过正则表达式replace，此时proxy通过$1$2来重组url， proxy:'ajax.loli.net/xxx/$1'
+      replace: '/(.*)/xxx'
     }
   },
   'clients*.google.com': {
     '.*': {
-      abort: true // 取消请求，被***封锁的资源，找不到替代，直接取消请求，快速失败，节省时间
+      abort: true
     }
   }
 }
@@ -220,22 +193,17 @@ const intercepts = {
 
 ### 5.2、DNS优选配置
 
-某些域名解析出来的ip会无法访问，（比如api.github.com会被解析到新加坡的ip上，新加坡的服务器在上午挺好，到了晚上就卡死，基本不可用）
-通过从dns上获取ip列表，切换不同的ip进行尝试，最终会挑选到一个最快的ip
-
 ```json
 {
   "dns": {
     "mapping": {
-      "api.github.com": "cloudflare", // "解决push的时候需要输入密码的问题",
-      "gist.github.com": "cloudflare", // 解决gist无法访问的问题
-      "*.githubusercontent.com": "cloudflare" // 解决github头像经常下载不到的问题
+      "api.github.com": "cloudflare",
+      "gist.github.com": "cloudflare",
+      "*.githubusercontent.com": "cloudflare"
     }
   }
 }
 ```
-
-注意：暂时只支持IPv4的解析
 
 ## 六、问题排查
 
@@ -245,7 +213,7 @@ const intercepts = {
 2. 请尝试右键dev-sidecar图标，点退出。再重新打开
 3. 如果还不行，请将日志发送给作者
 
-如果是mac系统，可能是下面的原因
+如果是mac系统，可能是下面的原因：
 
 #### 1）Mac系统使用时，首页的系统代理开关无法打开
 
@@ -259,181 +227,90 @@ networksetup -setwebproxy 'WiFi' 127.0.0.1 31181
 
 如果有上面的错误提示，请尝试如下方法：
 
-> 取消访问偏好设置需要管理员密码
-> 系统偏好设置—>安全性与隐私—> 通用—> 高级—> 访问系统范围的偏好设置需要输入管理员密码（取消勾选）
+> 系统偏好设置→安全性与隐私→通用→高级→取消勾选“访问系统范围的偏好设置需要输入管理员密码”
 
 ### 6.2、没有加速效果
 
-> 本应用仅支持https加速，请务必确认你访问的网站地址是https开头的
-
-1. 本应用仅支持https加速
-   请务必确认你访问的地址是https开头的
-   比如： [https://github.com/](https://github.com/)
-2. 检查浏览器是否装了什么插件，与ds有冲突
-3. 检查是否安装了其他代理软件，与ds有冲突
-4. 请确认浏览器的代理设置为使用IE代理/或者使用系统代理状态
-5. 可以尝试换个浏览器试试
-6. 请确认网络代理设置处于勾选状态
-   正常情况下ds在“系统代理”开关打开时，会自动设置系统代理。
+1. 请确认访问的网站地址是https开头
+2. 检查浏览器插件或代理软件冲突
+3. 确认浏览器代理设置为使用系统代理
+4. 尝试更换浏览器
 
 ### 6.3、浏览器打开提示证书不受信任
 
-![](./doc/crt-error.png)
-一般是证书安装位置不对，重新安装证书后，重启浏览器
+![](/dev-sidecar/crt-error.png)
 
-#### 1）windows: 请确认证书已正确安装在“信任的根证书颁发机构”下
+#### 浏览器处理步骤：
 
-#### 2）mac: 请确认证书已经被安装并已经设置信任
-
-#### 3）火狐浏览器：火狐浏览器不走系统的根证书，需要在选项中添加根证书
-
-1. 火狐浏览器->选项->隐私与安全->证书->查看证书
-2. 证书颁发机构->导入
-3. 选择证书文件 `C:\Users(用户)\Administrator(你的账号)\.dev-sidecar\dev-sidecar.ca.crt`（Mac或linux为 `~/.dev-sidecar` 目录）
-4. 勾选信任由此证书颁发机构来标识网站，确定即可
+1. 重新安装证书后重启浏览器
+2. 火狐浏览器需手动导入证书至“证书颁发机构”
 
 ### 6.4、打开github显示连接超时
 
-```html
-DevSidecar Warning: Error: www.github.com:443, 代理请求超时
-```
+1. 检查测速界面github.com是否有可用IP
+2. 安全模式下等待刷新
+3. 增强模式下可能因访问量大导致超时
 
-1. 检查测速界面github.com是否有ip ，如果没有ip，则可能是由于你的网络提供商封锁了dns服务商的ip（试试能否ping通：1.1.1.1 / 9.9.9.9 ）
-2. 如果是安全模式，则是因为不稳定导致的，等一会再刷新试试
-3. 如果是增强模式，则是由于访问人数过多，正常现象
+### 6.5、查看日志
 
-### 6.5、查看日志是否有报错
+日志路径：加速服务→日志按钮→打开日志文件夹
+![](/dev-sidecar/log.png)
 
-如果还是不行，请在下方加作者好友，将服务日志发送给作者进行分析
-日志打开方式：加速服务->右边日志按钮->打开日志文件夹
+### 6.6、应用意外关闭导致没有网络
 
-![](./doc/log.png)
+解决方案：
+1. 重新打开应用
+2. [手动关闭系统代理设置](#手动恢复网络代理设置)
+3. 设置应用为开机自启
 
-### 6.6、某些原本可以打开的网站打不开了
+### 6.7、手动恢复网络代理设置
 
-1. 可以尝试关闭pac
-2. 可以将域名加入白名单
+1. 关闭系统代理设置：
+   - Windows：设置→网络→手动关闭代理
+   - Mac：系统偏好→网络→高级→代理→取消勾选
+2. 清除git代理设置：
+   ```shell
+   git config --global --unset http.proxy
+   git config --global --unset https.proxy
+   git config --global --unset http.sslVerify
+   ```
+3. 清除npm代理设置：
+   ```shell
+   npm config delete proxy
+   npm config delete https-proxy
+   ```
 
-### 6.7、应用意外关闭导致没有网络了
+## 七、贡献代码
 
-应用开启后会自动修改系统代理设置，正常退出会自动关闭系统代理
-当应用意外关闭时，可能会因为没有将系统代理恢复，从而导致完全无法上网。
-
-对于此问题有如下几种解决方案可供选择：
-
-1. 重新打开应用即可（右键应用托盘图标可完全退出，将会正常关闭系统代理设置）
-2. 如果应用被卸载了，此时需要[手动关闭系统代理设置](./doc/recover.md)
-3. 如果你是因为开着ds的情况下重启电脑导致无法上网，你可以设置ds为开机自启
-
-### 6.8、卸载应用后上不了网，git请求不了
-
-如果你在卸载应用前，没有正常退出app，就有可能无法上网。请按如下步骤操作恢复您的网络：
-
-1、关闭系统代理设置，参见：[手动关闭系统代理设置](./doc/recover.md)
-2、执行下面的命令关闭git的代理设置（如果你开启过 `Git.exe代理` 的开关）
-
-```shell
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-git config --global --unset http.sslVerify
-```
-
-3、执行下面的命令关闭npm的代理设置（如果你开启过npm加速的开关）
+### 7.1、环境准备
 
 ```shell
-npm config delete proxy
-npm config delete https-proxy
-```
-
-## 七、在其他程序使用
-
-- [java程序使用](./doc/other.md#Java程序使用)
-
-## 八、贡献代码
-
-### 8.1、准备环境
-
-#### 1）安装 `nodejs`
-
-推荐安装 nodejs `22.x.x` 的版本，其他版本未做测试
-
-#### 2）安装 `pnpm`
-
-运行如下命令即可安装所需依赖：
-
-```shell
-npm install -g pnpm --registry=https://registry.npmmirror.com
-
-```
-
-### 8.2、开发调试模式启动
-
-运行如下命令即可开发模式启动
-
-```shell
-# 拉取代码
 git clone https://github.com/docmirror/dev-sidecar
-
 cd dev-sidecar
-
-# 注意不要使用 `npm install` 来安装依赖，因为 `pnpm` 会自动安装依赖
 pnpm install
-
-# 运行DevSidecar
 cd packages/gui
 npm run electron
-
 ```
 
-> 如果electron依赖包下载不动，可以开启ds的npm加速
+### 7.2、提交PR
 
-### 8.3、打包成可执行文件
+欢迎提交改进代码或问题修复
 
-```shell
-# 先执行上面的步骤，然后运行如下命令打包成可执行文件
-npm run electron:build
-```
+## 八、联系作者
 
-### 8.4、提交pr
+加群备注dev-sidecar：
+- QQ 2群：[667666069](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=n4nksr4sji93vZtD5e8YEHRT6qbh6VyQ&authKey=XKBZnzmoiJrAFyOT4V%2BCrgX5c13ds59b84g%2FVRhXAIQd%2FlAiilsuwDRGWJct%2B570&noverify=0&group_code=667666069)
+- QQ 4群：[438148299](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=i_NCBB5f_Bkm2JsEV1tLs2TkQ79UlCID&authKey=nMsVJbJ6P%2FGNO7Q6vsVUadXRKnULUURwR8zvUZJnP3IgzhHYPhYdcBCHvoOh8vYr&noverify=0&group_code=438148299)
 
-如果你想将你的修改贡献出来，请提交pr
+## 九、其他项目
 
-## 九、联系作者
+- [fast-crud](https://github.com/fast-crud/fast-crud)
+- [certd](https://github.com/certd/certd)
+- [trident-sync](https://github.com/handsfree-work/trident-sync)
 
-欢迎bug反馈，需求建议，技术交流等
+---
 
-1、 加群（请备注dev-sidecar，或简称DS）
-
-- QQ 1群：390691483，人数：500 / 500（满）
-- QQ 2群：[667666069](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=n4nksr4sji93vZtD5e8YEHRT6qbh6VyQ&authKey=XKBZnzmoiJrAFyOT4V%2BCrgX5c13ds59b84g%2FVRhXAIQd%2FlAiilsuwDRGWJct%2B570&noverify=0&group_code=667666069)，人数：447 / 500
-- QQ 3群：419807815，人数：500 / 500（满）
-- QQ 4群：[438148299](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=i_NCBB5f_Bkm2JsEV1tLs2TkQ79UlCID&authKey=nMsVJbJ6P%2FGNO7Q6vsVUadXRKnULUURwR8zvUZJnP3IgzhHYPhYdcBCHvoOh8vYr&noverify=0&group_code=438148299)，人数：203 / 1000
-- QQ 5群：[767622917](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=nAWi_Rxj7mM4Unp5LMiatmUWhGimtbcB&authKey=aswmlWGjbt3GIWXtvjB2GJqqAKuv7hWjk6UBs3MTb%2Biyvr%2Fsbb1kA9CjF6sK7Hgg&noverify=0&group_code=767622917)，人数：016 / 200（new）
-
-## 十、求star
-
-我的其他项目求star
-
-- [fast-crud](https://github.com/fast-crud/fast-crud) : 开发crud快如闪电
-- [certd](https://github.com/certd/certd) : 让你的证书永不过期
-- [trident-sync](https://github.com/handsfree-work/trident-sync) : 二次开发项目同步升级工具
-
-## 十一、感谢
-
-本项目使用lerna包管理工具
-
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-
-本项目参考如下开源项目
-
-- [node-mitmproxy](https://github.com/wuchangming/node-mitmproxy)
+**特别鸣谢**
+- [lerna](https://lerna.js.org/)
+- [FastGit](https://fastgit.org/)
 - [ReplaceGoogleCDN](https://github.com/justjavac/ReplaceGoogleCDN)
-
-特别感谢
-
-- [github增强油猴脚本](https://greasyfork.org/zh-CN/scripts/412245-github-%E5%A2%9E%E5%BC%BA-%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD) 本项目部分加速功能完全复制该脚本。
-- [中国域名白名单](https://github.com/pluwen/china-domain-allowlist)，本项目的系统代理排除域名功能中，使用了该白名单。
-
-本项目部分加速资源由如下组织提供
-
-- [FastGit UK](https://fastgit.org/)
