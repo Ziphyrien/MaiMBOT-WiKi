@@ -109,7 +109,7 @@ permalink: /tools/dev-sidecar/
 
 > 注意：mac版安装需要在“系统偏好设置->安全性与隐私->通用”中解锁并允许应用安装
 
-![](./doc/index.png)
+![](/dev-sidecar/index.png)
 
 #### 3）安装根证书
 
@@ -130,9 +130,9 @@ permalink: /tools/dev-sidecar/
 
 |          | 开启前                         | 开启后                                            |
 | -------- | ------------------------------ | ------------------------------------------------- |
-| 头像     | ![](./doc/avatar2.png)         | ![](./doc/avatar1.png)                            |
-| clone    | ![](./doc/clone-before.png)    | ![](./doc/clone.png)                              |
-| zip 下载 | ![](./doc/download-before.png) | ![](./doc/download.png)秒下的，实在截不到速度的图 |
+| 头像     | ![](/dev-sidecar/avatar2.png)         | ![](/dev-sidecar/avatar1.png)                            |
+| clone    | ![](/dev-sidecar/clone-before.png)    | ![](/dev-sidecar/clone.png)                              |
+| zip 下载 | ![](/dev-sidecar/download-before.png) | ![](/dev-sidecar/download.png)秒下的，实在截不到速度的图 |
 
 ## 三、模式说明
 
