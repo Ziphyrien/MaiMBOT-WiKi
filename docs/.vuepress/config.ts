@@ -82,10 +82,10 @@ export default defineUserConfig({
     // },
 
     plugins: {
-      // Google 统计
-      'google-analytics-4': {
+    'google-analytics-4': {
+        // your gtag tracking ID
         gtag: 'G-VFR6G29SP9'
-      },
+    }
       /**
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
