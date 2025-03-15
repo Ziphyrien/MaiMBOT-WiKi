@@ -9,6 +9,12 @@ export default defineUserConfig({
   title: 'MaiMBOT 8aka WiKi',
   description: '',
 
+  plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-VFR6G29SP9', // 正确初始化插件
+    }),
+  ],
+
   head: [
     // 配置站点图标
     ['link', { rel: 'icon', type: 'image/png', href: '/MaiM.png' }],
@@ -82,10 +88,7 @@ export default defineUserConfig({
     //   title: true,      // 是否生成标题
     // },
 
-    plugins: {    
-      googleAnalyticsPlugin: {
-        id: 'G-VFR6G29SP9',
-      },      
+    plugins: {         
       /**
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
