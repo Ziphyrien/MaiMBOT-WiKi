@@ -21,18 +21,7 @@ export default defineUserConfig({
   ],
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
-
-  plugins: [
-    [
-      'cursor-effects',
-      {
-        size: 2,          // 粒子大小，默认 2
-        shape: 'star',    // 粒子形状（'star' 或 'circle'）
-        zIndex: 999999999 // 画布层级
-      }
-    ]
-  ],
-
+  
   theme: plumeTheme({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
     hostname: 'https://maimbot.pages.dev',
