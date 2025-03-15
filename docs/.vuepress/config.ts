@@ -82,10 +82,10 @@ export default defineUserConfig({
     //   title: true,      // 是否生成标题
     // },
 
-    plugins: {
-      googleAnalyticsPlugin({
+    plugins: {    
+      googleAnalyticsPlugin: {
         id: 'G-VFR6G29SP9',
-      }),    
+      },      
       /**
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
