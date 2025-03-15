@@ -3,3 +3,5 @@ node_modules
 .temp
 package-lock.json
 package.json
+.vscode
+dist
