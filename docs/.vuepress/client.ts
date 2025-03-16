@@ -1,7 +1,6 @@
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import { defineClientConfig } from 'vuepress/client'
 import './theme/styles/index.scss'
-import Layout from './layouts/Layout.vue'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
@@ -12,7 +11,6 @@ import Layout from './layouts/Layout.vue'
 // import './theme/styles/custom.css'
 
 export default defineClientConfig({
-  layouts: { Layout },
   enhance({ app }) {
     // built-in components
     app.component('RepoCard', RepoCard)
