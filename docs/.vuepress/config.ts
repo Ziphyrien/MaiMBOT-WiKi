@@ -46,13 +46,13 @@ export default defineUserConfig({
     
     bulletin: {
       layout: 'bottom-left',
-      title: '帮助我',
+      title: '支持我',
       enablePage: true,
       lifetime: 'session',
       contentType: 'markdown',
       content: `\
-- 点电[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo) 含有我的**邀请码**🥺
-- 你我都将得到2000 万 Tokens，互利互惠🥳
+- 硅基注册[链接](https://cloud.siliconflow.cn/i/Dp1gWkNo) 含有我的**邀请码**🥺
+- 你我都会得到2000 万 Tokens，互利互惠🥳
     `,
     },
     
