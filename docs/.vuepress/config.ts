@@ -52,8 +52,9 @@ export default defineUserConfig({
       lifetime: 'session',
       contentType: 'markdown',
       content: `\
-- 硅基注册[链接](https://cloud.siliconflow.cn/i/Dp1gWkNo) 含有我的**邀请码**🥺
-- 你我都会得到2000 万 Tokens，互利互惠🥳
+- 硅基注册[链接](https://cloud.siliconflow.cn/i/Dp1gWkNo) 
+- 含我的**邀请码**🥺
+- 你我都会得到2000万Tokens🥳
     `,
     },
     
