@@ -20,6 +20,19 @@ const root = defineNoteConfig({
         '工具/dev-sidecar',
       ],  
     },    
+    {
+      text: '开发文档',      
+      items: [
+        {
+          text: '麦麦 GraphQL API 草案',
+          link: '/Development/GraphQL-API/README/',
+          items: [
+            // 未来添加子项
+          ],  
+        },
+
+      ],  
+    },    
   ],  
 })
 
