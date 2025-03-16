@@ -25,6 +25,7 @@ export default defineUserConfig({
       rel: "stylesheet",
       href: "https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css"
     }],
+    ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
   ],
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
