@@ -45,13 +45,14 @@ export default defineUserConfig({
     changelog: { maxCount: 10 },
     
     bulletin: {
-      layout: 'top-right',
-      title: '硅基API注册说明',
+      layout: 'bottom-left',
+      title: '帮助我',
       enablePage: true,
+      lifetime: 'session',
       contentType: 'markdown',
       content: `\
-- 点击[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo) 含有我的**邀请码**
-- 你我都将得到2000 万 Tokens，互利互惠！
+- 点电[注册](https://cloud.siliconflow.cn/i/Dp1gWkNo) 含有我的**邀请码**🥺
+- 你我都将得到2000 万 Tokens，互利互惠🥳
     `,
     },
     
