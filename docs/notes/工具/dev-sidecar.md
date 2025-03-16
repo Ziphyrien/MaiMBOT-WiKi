@@ -3,7 +3,11 @@ createTime: 2024/11/19 19:56:00
 permalink: /tools/dev-sidecar/
 title: dev-sidecar
 ---
-
+::: note
+搬运自项目的README              
+一般启动软件即可进行Github访问加速
+:::
+<RepoCard repo="docmirror/dev-sidecar" />
 开发者边车，命名取自service-mesh的service-sidecar，意为为开发者打辅助的边车工具（以下简称ds）
 通过本地代理的方式将https请求代理到一些国内的加速通道上
 
