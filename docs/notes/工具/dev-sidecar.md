@@ -1,6 +1,7 @@
 ---
 createTime: 2024/11/19 19:56:00
 permalink: /tools/dev-sidecar/
+icon: mdi:car-side
 title: dev-sidecar
 ---
 ::: note

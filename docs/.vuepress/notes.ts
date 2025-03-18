@@ -6,33 +6,23 @@ const root = defineNoteConfig({
   sidebar: [
     '项目介绍',
     '提问的智慧',
+    '麦麦形象授权',
     {
-      text: '开始部署',      
+      text: '部署',    
+      icon: 'material-symbols:deployed-code-outline',  
       link: '/deploy/reademe/',
       items: [
-        '部署教程/准备工作',
+        '部署/准备工作',
       ],  
     },
     {
-      text: '工具',      
+      text: '工具',    
+      icon: 'mdi:tools',  
       items: [
         '工具/编辑器',
         '工具/dev-sidecar',
       ],  
-    },    
-    {
-      text: '开发文档',      
-      items: [
-        {
-          text: '麦麦 GraphQL API 草案',
-          link: '/Development/GraphQL-API/README/',
-          items: [
-            // 未来添加子项
-          ],  
-        },
-
-      ],  
-    },    
+    },       
   ],  
 })
 
