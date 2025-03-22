@@ -4,9 +4,9 @@ import { plumeTheme } from 'vuepress-theme-plume'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 export default defineUserConfig({
-  base: '/',
+  base: '/MaiMBOT-WiKi/',
   lang: 'zh-CN',
-  title: 'MaiMBOT 8aka WiKi',
+  title: 'MaiMBot WiKi',
   description: '',
 
   plugins: [
