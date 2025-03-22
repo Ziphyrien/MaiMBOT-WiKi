@@ -18,14 +18,17 @@ jobs:
           fetch-depth: 0
 
       - name: Setup pnpm
-         uses: pnpm/action-setup@v4
-         with:
-           version: 10.6.1      
+        uses: pnpm/action-setup@v4
+        with:
+          # 选择要使用的 pnpm 版本
+          version: 10
+          # 使用 pnpm 安装依赖
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22        
+          # 选择要使用的 node 版本
+          node-version: 22
           # 缓存 pnpm 依赖
           cache: pnpm
 
